@@ -48,17 +48,17 @@
         lower_layer {
             bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // │  TAB     │  1       │  2       │  3       │  4       │  5       │   │  6       │  7       │  8       │  9       │  0       │  BSPC    │
-                     &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
+                // │  TAB     │          │          │          │          │          │   │          │  7       │  8       │  9       │          │  BSPC    │
+                     &kp TAB    &none      &none      &none      &none      &none          &none      &kp N7     &kp N8     &kp N9     &none      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // │  BTCLR   │  BT1     │  BT2     │  BT3     │  BT4     │  BT5     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │          │
-                    &bt BT_CLR  BT(0)      BT(1)      BT(2)      BT(3)      BT(4)          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &none
+                // │  BTCLR   │  BT1     │  BT2     │  BT3     │  BT4     │  BT5     │   │          │  4       │  5       │  6       │          │          │
+                    &bt BT_CLR  BT(0)      BT(1)      BT(2)      BT(3)      BT(4)          &none      &kp N4     &kp N5     &kp N6     &none      &none
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // │  SHIFT   │          │          │          │          │          │   │          │          │          │          │          │          │
-                     &kp LSHFT  &none      &none      &none      &none      &none          &none      &none      &none      &none      &none      &none
+                // │  SHIFT   │          │          │          │          │          │   │          │  1       │  2       │  3       │          │          │
+                     &kp LSHFT  &none      &none      &none      &none      &none          &none      &kp N1     &kp N2     &kp N3     &none      &none
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                //                                  │          │          │          │   │          │          │          │
-                                                      &none      &none      &none          &none      &none      &none
+                //                                  │          │          │          │   │          │  0       │          │
+                                                      &none      &none      &none          &none      &kp N0     &none
                 //                                  ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
