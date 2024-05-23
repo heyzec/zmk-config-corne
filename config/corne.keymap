@@ -42,13 +42,13 @@
                      &kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // │  BTCLR   │  BT1     │  BT2     │  BT3     │  BT4     │  BT5     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │          │
-                    &bt BT_CLR  BT(0)      BT(1)      BT(2)      BT(3)      BT(4)          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+                    &bt BT_CLR  BT(0)      BT(1)      BT(2)      BT(3)      BT(4)          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &none
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // │  SHIFT   │          │          │          │          │          │   │          │          │          │          │          │          │
-                     &kp LSHFT  &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans     &trans
+                     &kp LSHFT  &none      &none      &none      &none      &none          &none      &none      &none      &none      &none      &none
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                //                                  │  GUI     │          │  SPACE   │   │  ENTER   │          │  ALT     │
-                                                      &kp LGUI   &trans     &kp SPACE      &kp RET    &trans     &kp RALT
+                //                                  │          │          │          │   │          │          │          │
+                                                      &none      &none      &none          &none      &none      &none
                 //                                  ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -60,13 +60,13 @@
                      &kp TAB    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // │  CTRL    │          │          │          │          │          │   │  -       │  =       │  [       │  ]       │  \       │  `       │
-                     &kp LCTRL  &trans     &trans     &trans     &trans     &trans         &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &kp GRAVE
+                     &kp LCTRL  &none      &none      &none      &none      &none          &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT   &kp BSLH   &kp GRAVE
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // │  SHIFT   │          │          │          │          │          │   │  _       │  +       │  {       │  }       │  |       │  ~       │
-                     &kp LSHFT  &trans     &trans     &trans     &trans     &trans         &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE   &kp TILDE
+                     &kp LSHFT  &none      &none      &none      &none      &none          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp PIPE   &kp TILDE
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                //                                  │  GUI     │          │  SPACE   │   │  ENTER   │          │  ALT     │
-                                                      &kp LGUI   &trans     &kp SPACE      &kp RET    &trans     &kp RALT
+                //                                  │          │          │          │   │          │          │          │
+                                                      &none      &none      &none          &none      &none      &none
                 //                                  ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
