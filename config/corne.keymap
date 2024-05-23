@@ -15,6 +15,7 @@
 #define EXT 4
 
 #define BT(x) &bt BT_SEL x
+#define WM(x) &ht LG(LS(x)) LG(x)
 
 / {
     behaviors {
@@ -114,17 +115,17 @@
         extend_layer {
             bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // │          │          │          │          │          │          │   │          │          │          │          │          │          │
-                     &none      &none      &none      &none      &none      &none          &none      &none      &none      &none      &none      &none
+                // │  QUIT    │          │ ABOVE SP │ PREV SP  │ NEXT SP  │          │   │          │          │          │          │          │          │
+                     &kp LG(Q)  &none      WM(UP)    &kp LG(COMMA) &kp LG(DOT) &none       &none      &none      &none      &none      &none      &none
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // │          │          │          │          │          │          │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │          │
-                     &none      &none      &none      &none      &none      &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &none
+                // │          │ LEFT SP  │ BELOW SP │ RIGHT SP │ MAXIMISE │ LAUNCH   │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │          │          │
+                     &none      WM(LEFT)   WM(DOWN)   WM(RIGHT)  WM(F)     &kp LG(SPACE)   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none      &none
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // │          │          │          │          │          │          │   │          │          │          │          │          │          │
-                     &none      &none      &none      &none      &none      &none          &none      &none      &none      &none      &none      &none
+                // │          │          │          │ PREV TAB │ NEXT TAB │          │   │          │          │          │          │          │          │
+                     &none      &none      &none     &kp LC(LS(TAB)) &kp LC(TAB) &none     &none      &none      &none      &none      &none      &none
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                //                                  │          │          │          │   │          │          │          │
-                                                      &none      &none      &none          &none      &none      &none
+                //                                  │          │          │          │   │ TERMINAL │          │          │
+                                                      &none      &none      &none         &kp LG(RET) &none      &none
                 //                                  ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
